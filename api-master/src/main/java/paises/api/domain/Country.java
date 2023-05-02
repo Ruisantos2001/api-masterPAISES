@@ -16,26 +16,10 @@ import paises.api.service.CountryServiceImpl;
 public class Country
 {
      @Id @GeneratedValue (strategy=GenerationType.IDENTITY)
-     private long id;
-     private String name,capital,region,subregion,area;
-
-     public long getId(){return id;}
-     public void setId(long id){ this.id=id;}
-
-     public Country(CountryServiceImpl.CreateCountryData data)
-     {
-         this.name=data.name();
-         this.capital=data.capital();
-         this.region=data.region();
-         this.subregion=data.subregion();
-         this.area=data.area();
-     }
-
-     public void modifiycoutrydata(CountryServiceImpl.ModifiyCountryData data)
-     {
-         if(data.capital()!=null)
-         this.capital=data.capital();
-         if(data.area()!=null)
-         this.area=data.area();
-     }
+     private Long id;
+     private String name;
+     private String capital;
+     private String region;
+     private String subregion;
+     private String area;
 }
